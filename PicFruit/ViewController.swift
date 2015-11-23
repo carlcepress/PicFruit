@@ -15,21 +15,20 @@ class ViewController:
 
     @IBOutlet weak var tableView: UITableView!
     
-    var apple: Apple!
+    
     var produceArray: [Produce]! //swap Apple with Produce
-    var produceTitles: [String]!
-
+   
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        apple = Apple()
-        //carrot = Carrot()
-        apple.test()
+        
        
+        
+    //THIS LINE CREATES THE ORDER
         produceArray = [Produce]()
-        produceArray.append(apple)
+        produceArray = [Apple(), Carrot()]
+        
         
       
         

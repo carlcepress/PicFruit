@@ -25,8 +25,20 @@ class Apple:Produce {
     
     }
     
-  
+
     
-    
   
+}
+
+
+class Carrot:Produce{
+    
+    override init () {
+        
+        super.init()
+        
+        super.previewImage = UIImage(named: "carrotPreview.jpg")
+        super.produceTitle = "Carrot"
+    }
+    
 }
