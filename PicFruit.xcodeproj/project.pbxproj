@@ -16,6 +16,7 @@
 		949EEA221C02851E00147118 /* PicFruitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949EEA211C02851E00147118 /* PicFruitUITests.swift */; };
 		949EEA301C028B9D00147118 /* ProduceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949EEA2F1C028B9D00147118 /* ProduceCell.swift */; settings = {ASSET_TAGS = (); }; };
 		94BC6FEA1C039E0C00D0F86C /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC6FE91C039E0C00D0F86C /* Apple.swift */; settings = {ASSET_TAGS = (); }; };
+		94BC6FEC1C03A36400D0F86C /* Produce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC6FEB1C03A36400D0F86C /* Produce.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		949EEA231C02851E00147118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		949EEA2F1C028B9D00147118 /* ProduceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProduceCell.swift; sourceTree = "<group>"; };
 		94BC6FE91C039E0C00D0F86C /* Apple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
+		94BC6FEB1C03A36400D0F86C /* Produce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				949EEA011C02851D00147118 /* AppDelegate.swift */,
 				949EEA031C02851D00147118 /* ViewController.swift */,
+				94BC6FEB1C03A36400D0F86C /* Produce.swift */,
 				94BC6FE91C039E0C00D0F86C /* Apple.swift */,
 				949EEA2F1C028B9D00147118 /* ProduceCell.swift */,
 				949EEA051C02851D00147118 /* Main.storyboard */,
@@ -266,6 +269,7 @@
 			files = (
 				94BC6FEA1C039E0C00D0F86C /* Apple.swift in Sources */,
 				949EEA301C028B9D00147118 /* ProduceCell.swift in Sources */,
+				94BC6FEC1C03A36400D0F86C /* Produce.swift in Sources */,
 				949EEA041C02851D00147118 /* ViewController.swift in Sources */,
 				949EEA021C02851D00147118 /* AppDelegate.swift in Sources */,
 			);

@@ -16,7 +16,7 @@ class ViewController:
     @IBOutlet weak var tableView: UITableView!
     
     var apple: Apple!
-    
+    var produceArray: [Produce]! //swap Apple with Produce
     var produceTitles: [String]!
 //    var movies: [NSDictionary]!
     var previewImages: [UIImage]!
@@ -55,10 +55,10 @@ class ViewController:
 //        tomatoPreview = UIImage(named: "tomatoPreview.png")
 //        
         
-        produceTitles = ["apples","carrots","blackberries", apple.produceTitles]
+        produceTitles = ["apples","carrots","blackberries", apple.produceTitle]
 //            , "grapes","green beans", "lettuce", "mushrooms", "onions", "purple cauliflower", "raspberries", "strawberries", "sweet potatoes", "tomatoes"]
         //movies = []
-        previewImages = [applePreview, carrotPreview, blackBerryPreview, apple.applePreview]
+        previewImages = [applePreview, carrotPreview, blackBerryPreview, apple.previewImage]
 
        // print (produceTitles[1])
         

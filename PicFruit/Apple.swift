@@ -10,23 +10,23 @@ import Foundation
 import UIKit
 
 
-class Apple {
+class Apple:Produce {
    
-    var applePreview: UIImage!
-    var produceTitles: String!
+
     
-    init () {
+    override init () {
+        
+        super.init()
        
-        applePreview = UIImage(named: "applePreview.jpg")
-        produceTitles = "Apple"
+        super.previewImage = UIImage(named: "applePreview.jpg")
+        super.produceTitle = "Apple"
         
         
     
     }
     
-    func test(){
-    print (produceTitles)
-    }
+  
+    
     
   
 }
