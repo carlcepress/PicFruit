@@ -15,6 +15,7 @@
 		949EEA171C02851D00147118 /* PicFruitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949EEA161C02851D00147118 /* PicFruitTests.swift */; };
 		949EEA221C02851E00147118 /* PicFruitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949EEA211C02851E00147118 /* PicFruitUITests.swift */; };
 		949EEA301C028B9D00147118 /* ProduceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949EEA2F1C028B9D00147118 /* ProduceCell.swift */; settings = {ASSET_TAGS = (); }; };
+		94BC6FEA1C039E0C00D0F86C /* Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC6FE91C039E0C00D0F86C /* Apple.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		949EEA211C02851E00147118 /* PicFruitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicFruitUITests.swift; sourceTree = "<group>"; };
 		949EEA231C02851E00147118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		949EEA2F1C028B9D00147118 /* ProduceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProduceCell.swift; sourceTree = "<group>"; };
+		94BC6FE91C039E0C00D0F86C /* Apple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apple.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				949EEA011C02851D00147118 /* AppDelegate.swift */,
 				949EEA031C02851D00147118 /* ViewController.swift */,
+				94BC6FE91C039E0C00D0F86C /* Apple.swift */,
 				949EEA2F1C028B9D00147118 /* ProduceCell.swift */,
 				949EEA051C02851D00147118 /* Main.storyboard */,
 				949EEA081C02851D00147118 /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94BC6FEA1C039E0C00D0F86C /* Apple.swift in Sources */,
 				949EEA301C028B9D00147118 /* ProduceCell.swift in Sources */,
 				949EEA041C02851D00147118 /* ViewController.swift in Sources */,
 				949EEA021C02851D00147118 /* AppDelegate.swift in Sources */,
@@ -488,6 +492,7 @@
 				949EEA281C02851E00147118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		949EEA291C02851E00147118 /* Build configuration list for PBXNativeTarget "PicFruitTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				949EEA2B1C02851E00147118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		949EEA2C1C02851E00147118 /* Build configuration list for PBXNativeTarget "PicFruitUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				949EEA2E1C02851E00147118 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

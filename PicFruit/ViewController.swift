@@ -15,6 +15,8 @@ class ViewController:
 
     @IBOutlet weak var tableView: UITableView!
     
+    var apple: Apple!
+    
     var produceTitles: [String]!
 //    var movies: [NSDictionary]!
     var previewImages: [UIImage]!
@@ -35,6 +37,8 @@ class ViewController:
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        apple = Apple()
+        apple.test()
         
         applePreview = UIImage(named: "applePreview.jpg")
         carrotPreview = UIImage(named: "carrotPreview.jpg")
@@ -51,12 +55,12 @@ class ViewController:
 //        tomatoPreview = UIImage(named: "tomatoPreview.png")
 //        
         
-        produceTitles = ["apples","carrots","blackberries"]
+        produceTitles = ["apples","carrots","blackberries", apple.produceTitles]
 //            , "grapes","green beans", "lettuce", "mushrooms", "onions", "purple cauliflower", "raspberries", "strawberries", "sweet potatoes", "tomatoes"]
         //movies = []
-        previewImages = [applePreview, carrotPreview, blackBerryPreview]
+        previewImages = [applePreview, carrotPreview, blackBerryPreview, apple.applePreview]
 
-        print (produceTitles[1])
+       // print (produceTitles[1])
         
         
         tableView.delegate = self
