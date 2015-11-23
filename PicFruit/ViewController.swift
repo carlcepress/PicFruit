@@ -38,7 +38,11 @@ class ViewController:
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         apple = Apple()
+        //carrot = Carrot()
         apple.test()
+       
+        produceArray = [Produce]()
+        produceArray.append(apple)
         
         applePreview = UIImage(named: "applePreview.jpg")
         carrotPreview = UIImage(named: "carrotPreview.jpg")
@@ -91,7 +95,7 @@ class ViewController:
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return produceTitles.count
+        return produceArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -99,12 +103,17 @@ class ViewController:
         
             //let produceTitle = produceTitles[indexPath.row]
         
-        let produceTitle = produceTitles[indexPath.row]
-            cell.titleLabel.text = produceTitle
-        let previewImage = previewImages[indexPath.row]
-            cell.previewImageView.image = previewImage
+//        let produceTitle = produceTitles[indexPath.row]
+//            cell.titleLabel.text = produceTitle
+        let produceTitle = produceArray[indexPath.row].produceTitle
+             cell.titleLabel.text = produceTitle
         
-//        
+//        let previewImage = previewImages[indexPath.row]
+//            cell.previewImageView.image = previewImage
+        let previewImage = produceArray[indexPath.row].previewImage
+        cell.previewImageView.image = previewImage
+
+//
 //            cell.titleLabel.text = movie["title"] as? String
 //            cell.tipLabel.text = movie["synopsis"] as? String
         
