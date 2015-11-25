@@ -18,24 +18,60 @@ class ProduceCell: UITableViewCell {
     @IBOutlet weak var produceImageView: UIImageView!
     
     @IBOutlet weak var frostedGlassView: UIVisualEffectView!
+    
+    var originalCenter = CGPoint()
+    var deleteOnDragRelease = false
+    
+ 
  
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override fungitc setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
+//        var recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+//        recognizer.delegate = self
+//        addGestureRecognizer(recognizer)
         // Configure the view for the selected state
     }
     
-    @IBAction func ifPreviewPress(sender: AnyObject) {
-        
-//        while ifPreviewPress(sender: AnyObject){
-           frostedGlassView.alpha = 0
+ 
+    
+    
+//    func handlePan(recognizer: UIPanGestureRecognizer) {
+//        
+//        print("did pan")
+//        
+//       
+//        if recognizer.state == .Began {
+//            originalCenter = center
+//        }
+//  
+//        if recognizer.state == .Changed {
+//            let translation = recognizer.translationInView(self)
+//            center = CGPointMake(originalCenter.x + translation.x, originalCenter.y)
+//
+//        }
+//        
+//        if recognizer.state == .Ended {
+//            let originalFrame = CGRect(x: 0, y: frame.origin.y,
+//                width: bounds.size.width, height: bounds.size.height)
+//            if !deleteOnDragRelease {
+//                UIView.animateWithDuration(0.2, animations: {self.frame = originalFrame})
+//            }
+//        }
+//    }
+    
+//    @IBAction func ifPeviewPress(sender: AnyObject) {
+//        //        while ifPreviewPress(sender: AnyObject){
+//           frostedGlassView.alpha = 0
     //}
-    }
+//    }
 
 }

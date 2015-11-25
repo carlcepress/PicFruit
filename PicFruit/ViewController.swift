@@ -27,7 +27,7 @@ class ViewController:
         
     //THIS LINE CREATES THE ORDER
         produceArray = [Produce]()
-        produceArray = [Apple(), Carrot()]
+        produceArray = [  Onion(),Grape(), Lettuce(), Carrot(),Apple(),Strawberry(), Raspberry(),Onion()]
         
         
       
