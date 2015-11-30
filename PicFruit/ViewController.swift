@@ -23,11 +23,13 @@ class ViewController:
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.backgroundColor = UIColor.whiteColor()
+        
        
         
     //THIS LINE CREATES THE ORDER
         produceArray = [Produce]()
-        produceArray = [  Onion(),Grape(), Lettuce(), Carrot(),Apple(),Strawberry(), Raspberry(),Onion()]
+        produceArray = [Onion(),Grape(), Lettuce(), Carrot(),Apple(),Strawberry(), Raspberry(),Onion()]
         
         
       
@@ -53,9 +55,10 @@ class ViewController:
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ProduceCell")as! ProduceCell
         
+        cell.selectionStyle = .None
 
-        let produceTitle = produceArray[indexPath.row].produceTitle
-             cell.titleLabel.text = produceTitle
+//       let produceTitle = produceArray[indexPath.row].produceTitle
+//             cell.titleLabel.text = produceTitle
         
 
         let previewImage = produceArray[indexPath.row].previewImage
@@ -67,6 +70,14 @@ class ViewController:
         
             return cell
     }
+    
 
+
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        var pickViewController = segue.destinationViewController as PickViewController
+//      }
+    
+    
+    
 }
 

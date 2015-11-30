@@ -19,15 +19,9 @@ class Apple:Produce {
         super.init()
        
         super.previewImage = UIImage(named: "applePreview.png")
-        super.produceTitle = "Apple"
-        
-        
+       // super.produceTitle = "Apple"
     
     }
-    
-
-    
-  
 }
 
 
@@ -38,7 +32,7 @@ class Carrot:Produce{
         super.init()
         
         super.previewImage = UIImage(named: "carrotPreview.png")
-        super.produceTitle = "Carrot"
+        //super.produceTitle = "Carrot"
     }
     
 }
@@ -50,7 +44,7 @@ class Grape:Produce{
         super.init()
         
         super.previewImage = UIImage(named: "grapePreview.png")
-        super.produceTitle = "Grape"
+        //super.produceTitle = "Grape"
     }
     
 }
@@ -61,7 +55,7 @@ class Lettuce:Produce{
         super.init()
         
         super.previewImage = UIImage(named: "lettucePreview.png")
-        super.produceTitle = "Lettuce"
+       // super.produceTitle = "Lettuce"
     }
     
 }
@@ -72,7 +66,7 @@ class Onion:Produce{
         super.init()
         
         super.previewImage = UIImage(named: "onionPreview.png")
-        super.produceTitle = "Onion"
+       // super.produceTitle = "Onion"
     }
     
 }
@@ -83,7 +77,7 @@ class Raspberry:Produce{
         super.init()
         
         super.previewImage = UIImage(named: "raspberryPreview.png")
-        super.produceTitle = "Raspberry"
+       // super.produceTitle = "Raspberry"
     }
     
 }
@@ -94,7 +88,7 @@ class Strawberry:Produce{
         super.init()
         
         super.previewImage = UIImage(named: "strawberryPreview.png")
-        super.produceTitle = "Strawberry"
+        //super.produceTitle = "Strawberry"
     }
     
 }

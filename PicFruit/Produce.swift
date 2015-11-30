@@ -13,7 +13,7 @@ import UIKit
 class Produce {
     
     var previewImage: UIImage!
-    var produceTitle: String!
+  //  var produceTitle: String!
 //    var pickingTips: String!
 //    var prepTips: String!
 //    var largeImage: UIImage!
@@ -21,8 +21,8 @@ class Produce {
     init (){
        
     }
-    func test(){
-        print (produceTitle)
-    }
+//    func test(){
+//        print (produceTitle)
+//    }
     
 }
