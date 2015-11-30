@@ -27,6 +27,10 @@ class ProduceCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        let recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
+        recognizer.delegate = self
+        addGestureRecognizer(recognizer)
         // Initialization code
      
     }
@@ -37,9 +41,7 @@ class ProduceCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        let recognizer = UIPanGestureRecognizer(target: self, action: "handlePan:")
-        recognizer.delegate = self
-        addGestureRecognizer(recognizer)
+      
         
         // Configure the view for the selected state
     
