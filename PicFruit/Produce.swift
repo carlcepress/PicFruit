@@ -13,6 +13,7 @@ import UIKit
 class Produce {
     
     var previewImage: UIImage!
+    var pickImage: UIImage!
   //  var produceTitle: String!
 //    var pickingTips: String!
 //    var prepTips: String!

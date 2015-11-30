@@ -13,27 +13,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tOT-Hg-ZeZ" userLabel="Pick Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applePick" id="tOT-Hg-ZeZ" userLabel="Pick Image View">
                                 <rect key="frame" x="0.0" y="0.0" width="376" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" red="0.61337450702970298" green="1" blue="0.76967960194013951" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9f2-If-nPH">
                                 <rect key="frame" x="307" y="29" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="Back &gt;"/>
+                                <state key="normal" title="Back &gt;">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="backButton:" destination="Moo-m2-Nq6" eventType="touchUpInside" id="LFc-3h-L2g"/>
                                     <segue destination="BYZ-38-t0r" kind="modal" id="O0h-46-TPy"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Produce Name" textAlignment="center" id="Cl2-3G-vXK">
+                                <rect key="frame" x="20" y="384" width="329" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Pick if: ....." id="ugP-dl-Fj1">
+                                <rect key="frame" x="24" y="452" width="329" height="41.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Don't Pick if: ....." id="TQ3-2I-265">
+                                <rect key="frame" x="26" y="540" width="329" height="41.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pickView" destination="tOT-Hg-ZeZ" id="2wc-Et-Esl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDE-Xa-woR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +113,6 @@
                                         <gestureRecognizers/>
                                         <connections>
                                             <outlet property="previewImageView" destination="w8w-sa-Vhb" id="kkF-Bl-LsM"/>
-                                            <outlet property="produceImageView" destination="w8w-sa-Vhb" id="APi-R7-01l"/>
                                             <outlet property="titleLabel" destination="oNE-LU-eso" id="lBW-9R-0UG"/>
                                         </connections>
                                     </tableViewCell>
@@ -115,7 +142,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rTL-id-2IX" userLabel="Store Image View">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applePick" id="rTL-id-2IX" userLabel="Store Image View">
                                 <rect key="frame" x="-1" y="0.0" width="376" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
@@ -125,12 +152,38 @@
                                 <rect key="frame" x="10" y="33" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <state key="normal" title="&lt; Back "/>
+                                <state key="normal" title="&lt; Back ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="backButton:" destination="KiR-mP-Tug" eventType="touchUpInside" id="lMz-Gf-FOK"/>
                                     <action selector="backButton:" destination="Moo-m2-Nq6" eventType="touchUpInside" id="zxr-cl-ROz"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Produce Name" textAlignment="center" id="D4o-fW-2bN">
+                                <rect key="frame" x="20" y="402" width="329" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Store here..." id="9mQ-z2-NIm">
+                                <rect key="frame" x="24" y="470.5" width="329" height="41.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Don't store here..." id="Km2-QB-P44">
+                                <rect key="frame" x="26" y="558.5" width="329" height="41.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,7 +215,10 @@
             <point key="canvasLocation" x="677.5" y="-413.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="applePick" width="1000" height="1000"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ve0-0D-65c"/>
+        <segue reference="O0h-46-TPy"/>
     </inferredMetricsTieBreakers>
 </document>

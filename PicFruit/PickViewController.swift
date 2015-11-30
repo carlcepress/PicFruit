@@ -10,9 +10,15 @@ import UIKit
 
 class PickViewController: UIViewController {
 
+    @IBOutlet weak var pickView: UIImage!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+       // pickView = UIImage (named: "pickApple.png")
+        
         // Do any additional setup after loading the view.
     }
 

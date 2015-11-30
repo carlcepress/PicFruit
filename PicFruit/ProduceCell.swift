@@ -14,9 +14,8 @@ class ProduceCell: UITableViewCell {
     
     @IBOutlet weak var previewImageView: UIImageView!
    
-    @IBOutlet weak var produceImageView: UIImageView!
     
-    @IBOutlet weak var frostedGlassView: UIVisualEffectView!
+   // @IBOutlet weak var frostedGlassView: UIVisualEffectView!
     
     
     var viewController: ViewController!

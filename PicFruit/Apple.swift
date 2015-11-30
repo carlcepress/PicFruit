@@ -20,6 +20,7 @@ class Apple:Produce {
        
         super.previewImage = UIImage(named: "applePreview.png")
        // super.produceTitle = "Apple"
+        super.pickImage = UIImage(named: "applePick.png")
     
     }
 }
