@@ -74,6 +74,11 @@ class ProduceCell: UITableViewCell {
 //            if translation.x < 0{
 //                tableView.backgroundColor = UIColor.blueColor()
 //            }
+//            if translation.x > 0{
+//                
+//            }
+        
+        
         }
  
 // RETURN CELL TO CENTER

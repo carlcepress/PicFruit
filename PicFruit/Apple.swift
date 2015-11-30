@@ -93,6 +93,88 @@ class Strawberry:Produce{
     
 }
 
+class Banana:Produce{
+    
+    override init () {
+        
+        super.init()
+        
+        super.previewImage = UIImage(named: "bananaPreview.png")
+//super.produceTitle = "Banana"
 
 
+    }
+}
+class Blackberry:Produce{
+    
+    override init () {
+        
+        super.init()
+        
+        super.previewImage = UIImage(named: "blackberryPreview.png")
+        //super.produceTitle = "Blackberry"
+        
+        
+    }
+}
+class Cucumber:Produce{
+    
+    override init () {
+        
+        super.init()
+        
+        super.previewImage = UIImage(named: "cucumberPreview.png")
+        //super.produceTitle = "Cucumber"
+        
+        
+    }
+}
+class Greenbean:Produce{
+    
+    override init () {
+        
+        super.init()
+        
+        super.previewImage = UIImage(named: "greenbeanPreview.png")
+        //super.produceTitle = "Greenbean"
+        
+        
+    }
+}
+class Mushroom:Produce{
+    
+    override init () {
+        
+        super.init()
+        
+        super.previewImage = UIImage(named: "mushroomPreview.png")
+        //super.produceTitle = "Mushroom"
+        
+        
+    }
+}
+class Orange:Produce{
+    
+    override init () {
+        
+        super.init()
+        
+        super.previewImage = UIImage(named: "orangePreview.png")
+        //super.produceTitle = "Orange"
+        
+        
+    }
+}
+class Garlic:Produce{
+    
+    override init () {
+        
+        super.init()
+        
+        super.previewImage = UIImage(named: "garlicPreview.png")
+        //super.produceTitle = "Garlic"
+        
+        
+    }
+}
 
