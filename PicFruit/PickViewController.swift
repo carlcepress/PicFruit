@@ -21,6 +21,14 @@ class PickViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func backButton(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    
+  
+    
 
     /*
     // MARK: - Navigation

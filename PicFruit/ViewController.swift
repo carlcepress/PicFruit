@@ -54,7 +54,7 @@ class ViewController:
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ProduceCell")as! ProduceCell
-        
+        cell.viewController = self
         cell.selectionStyle = .None
 
 //       let produceTitle = produceArray[indexPath.row].produceTitle

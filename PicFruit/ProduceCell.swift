@@ -19,6 +19,7 @@ class ProduceCell: UITableViewCell {
     @IBOutlet weak var frostedGlassView: UIVisualEffectView!
     
     
+    var viewController: ViewController!
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false
     
@@ -65,12 +66,14 @@ class ProduceCell: UITableViewCell {
             
             print(translation.x)//,translation.y)
             
-//            if translation.x > 75{
-//                performSegueWithIdentifier("pickSegue", sender: self)
-//            }
-//            if translation.x < -75{
-//                performSegueWithIdentifier("storeSegue", sender:self)
-//            }
+           if translation.x > 75{
+              viewController.performSegueWithIdentifier("pickSegue", sender: nil)
+                center = CGPointMake(originalCenter.x, originalCenter.y)
+          }
+           if translation.x < -75{
+                viewController.performSegueWithIdentifier("storeSegue", sender:self)
+                center = CGPointMake(originalCenter.x, originalCenter.y)
+          }
 //            if translation.x < 0{
 //                tableView.backgroundColor = UIColor.blueColor()
 //            }

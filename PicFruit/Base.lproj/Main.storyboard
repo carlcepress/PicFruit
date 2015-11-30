@@ -13,12 +13,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m8N-hT-Z2a">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tOT-Hg-ZeZ" userLabel="Pick Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <color key="backgroundColor" red="0.61337450702970298" green="1" blue="0.76967960194013951" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9f2-If-nPH">
+                                <rect key="frame" x="307" y="29" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Back &gt;"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Moo-m2-Nq6" eventType="touchUpInside" id="LFc-3h-L2g"/>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="O0h-46-TPy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,7 +54,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProduceCell" rowHeight="90" id="iiY-RR-mYM" customClass="ProduceCell" customModule="PicFruit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="90"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iiY-RR-mYM" id="V70-R6-D9h">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
@@ -89,6 +99,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="sba-9G-0ye" id="cWc-wq-JwP"/>
+                        <segue destination="Moo-m2-Nq6" kind="modal" identifier="pickSegue" modalTransitionStyle="flipHorizontal" id="Ruw-Zl-mz3"/>
+                        <segue destination="KiR-mP-Tug" kind="modal" identifier="storeSegue" modalTransitionStyle="flipHorizontal" id="IxH-cU-pLu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,12 +115,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OBH-gU-ixR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rTL-id-2IX" userLabel="Store Image View">
+                                <rect key="frame" x="-1" y="0.0" width="376" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <color key="backgroundColor" red="1" green="0.10204949301879918" blue="0.27857268902753518" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SXr-zu-awA">
+                                <rect key="frame" x="10" y="33" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="&lt; Back "/>
+                                <connections>
+                                    <action selector="backButton:" destination="KiR-mP-Tug" eventType="touchUpInside" id="lMz-Gf-FOK"/>
+                                    <action selector="backButton:" destination="Moo-m2-Nq6" eventType="touchUpInside" id="zxr-cl-ROz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,7 +144,7 @@
         <!--Navigation Controller-->
         <scene sceneID="rw3-aj-FGm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="75i-hY-R0C" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="75i-hY-R0C" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1K7-0d-Wdg">
@@ -140,4 +162,7 @@
             <point key="canvasLocation" x="677.5" y="-413.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ve0-0D-65c"/>
+    </inferredMetricsTieBreakers>
 </document>
