@@ -9,6 +9,14 @@
 import UIKit
 
 class StoreViewController: UIViewController {
+    
+    
+    @IBOutlet weak var storageEnvironmentText: UITextView!
+    
+    @IBOutlet weak var shelfLifeText: UITextView!
+    @IBOutlet weak var pickProduceName: UITextView!
+    
+    
 
     var produce: Produce!
     
@@ -16,6 +24,13 @@ class StoreViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        storageEnvironmentText.text = produce.storageEnvironmentText
+        shelfLifeText.text = produce.shelfLifeText
+        pickProduceName.text = produce.pickProduceNameText
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

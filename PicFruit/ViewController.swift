@@ -62,6 +62,11 @@ class ViewController:
 //       let produceTitle = produceArray[indexPath.row].produceTitle
 //             cell.titleLabel.text = produceTitle
         
+        let storeTip = produceArray[indexPath.row].storeTip
+                     cell.storeTip.text = storeTip
+        
+        let pickTip = produceArray[indexPath.row].pickTip
+        cell.pickTip.text = pickTip
 
         let previewImage = produceArray[indexPath.row].previewImage
         cell.previewImageView.image = previewImage

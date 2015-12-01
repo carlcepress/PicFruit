@@ -20,7 +20,15 @@ class Apple:Produce {
        
         super.previewImage = UIImage(named: "applePreview.png")
        // super.produceTitle = "Apple"
-        super.pickImage = UIImage(named: "applePick.png")
+        super.pickImage = UIImage(named: "applePick2.png")
+        super.pickProduceNameText = "Apples"
+        super.pickIfText = "PICK IF: firm, makes snap sound when cut with knife or bitten"
+        super.pickTip = "Firm when squeezed"
+        super.dontPickIfText = "DON'T PICK IF: feels soft when squeezed, brown discoloration, mishapen, bruised"
+        super.seasonText = "SEASON: All Year, highest volumes Sept-May"
+        super.storageEnvironmentText = "STORE: 32 °F with a relative humidity of 90% and some air circulation"
+        super.shelfLifeText = "SHELF LIFE: Apples stored at general refrigeration temperatures below 41 °F will have approximate shelf life of up to 20 days. Apples may be held in dry storage for up to 7 days."
+        super.storeTip = "20 days in fridge"
     
     }
 }
@@ -34,6 +42,10 @@ class Carrot:Produce{
         
         super.previewImage = UIImage(named: "carrotPreview.png")
         //super.produceTitle = "Carrot"
+        super.pickImage = UIImage(named: "carrotPreview.png")
+        super.pickTip = "brightly colored, firm, cylindical"
+        super.storeTip = "10 days in sealed bag in fridge"
+
     }
     
 }
@@ -46,6 +58,8 @@ class Grape:Produce{
         
         super.previewImage = UIImage(named: "grapePreview.png")
         //super.produceTitle = "Grape"
+        super.pickTip = "bounce slightly when dropped"
+        super.storeTip = "7 days in fridge"
     }
     
 }
@@ -57,6 +71,8 @@ class Lettuce:Produce{
         
         super.previewImage = UIImage(named: "lettucePreview.png")
        // super.produceTitle = "Lettuce"
+        super.pickTip = "bright and crisp"
+        super.storeTip = "5 days in fridge"
     }
     
 }
@@ -90,6 +106,8 @@ class Strawberry:Produce{
         
         super.previewImage = UIImage(named: "strawberryPreview.png")
         //super.produceTitle = "Strawberry"
+        super.pickTip = "natural shine, fresh Calyx (cap)"
+        super.storeTip = "3 days in fridge"
     }
     
 }
@@ -101,6 +119,9 @@ class Banana:Produce{
         super.init()
         
         super.previewImage = UIImage(named: "bananaPreview.png")
+        super.pickTip = "brown speckling is ready to eat"
+        super.storeTip = "5 days @ 70°F"
+
 //super.produceTitle = "Banana"
 
 
@@ -162,6 +183,8 @@ class Orange:Produce{
         
         super.previewImage = UIImage(named: "orangePreview.png")
         //super.produceTitle = "Orange"
+        super.pickTip = "slight pressure when squeezed"
+        super.storeTip = "10 days in fridge"
         
         
     }

@@ -14,10 +14,15 @@ class Produce {
     
     var previewImage: UIImage!
     var pickImage: UIImage!
+    var pickProduceNameText: String!
   //  var produceTitle: String!
-//    var pickingTips: String!
-//    var prepTips: String!
-//    var largeImage: UIImage!
+    var pickIfText: String!
+    var dontPickIfText: String!
+    var seasonText: String!
+    var storageEnvironmentText: String!
+    var shelfLifeText: String!
+    var pickTip: String!
+    var storeTip: String!
    
     init (){
        

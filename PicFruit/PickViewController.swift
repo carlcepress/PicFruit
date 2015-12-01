@@ -10,7 +10,12 @@ import UIKit
 
 class PickViewController: UIViewController {
 
-    @IBOutlet weak var pickView: UIImage!
+    @IBOutlet weak var pickView: UIImageView!
+    @IBOutlet weak var pickProduceNameText: UITextView!
+    @IBOutlet weak var pickIfText: UITextView!
+    @IBOutlet weak var dontPickIfText: UITextView!
+    @IBOutlet weak var seasonText: UITextView!
+    
     
     var produce: Produce!
     
@@ -18,7 +23,15 @@ class PickViewController: UIViewController {
         super.viewDidLoad()
 
         
-       // pickView = UIImage (named: "pickApple.png")
+//        pickView = UIImageView(image:produce.pickImage)
+//        cell.previewImageView.image = previewImage
+        pickView.image = produce.pickImage
+        pickProduceNameText.text = produce.pickProduceNameText
+        pickIfText.text = produce.pickIfText
+        dontPickIfText.text = produce.dontPickIfText
+        seasonText.text = produce.seasonText
+        
+        
         
         // Do any additional setup after loading the view.
     }

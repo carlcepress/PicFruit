@@ -18,6 +18,9 @@ class ProduceCell: UITableViewCell {
     
     @IBOutlet weak var previewImageView: UIImageView!
    
+    @IBOutlet weak var storeTip: UILabel!
+    
+    @IBOutlet weak var pickTip: UILabel!
     
    // @IBOutlet weak var frostedGlassView: UIVisualEffectView!
     
@@ -29,7 +32,13 @@ class ProduceCell: UITableViewCell {
     var deleteOnDragRelease = false
     
     var produce: Produce!
- 
+    
+    var green = UIColor.init(red: 100/255, green: 220/255, blue: 90/255, alpha: 1.0)
+    var blue = UIColor.init(red: 0/255, green: 99/255, blue: 201/255, alpha: 1.0)
+
+    
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -72,23 +81,24 @@ class ProduceCell: UITableViewCell {
             print(translation.x)//,translation.y)
             //print(produceArray[indexPath.row])
             
-           if translation.x > 75{
+           if translation.x > 150{
                 delegate.pickedFruit(produce)
             
               viewController.performSegueWithIdentifier("pickSegue", sender: produce)
                 previewImageView.center = CGPointMake(originalCenter.x, originalCenter.y)
             
           }
-           if translation.x < -75{
+           if translation.x < -150{
                 viewController.performSegueWithIdentifier("storeSegue", sender: produce)
                 previewImageView.center = CGPointMake(originalCenter.x, originalCenter.y)
           }
             if translation.x < 0{
-                contentView.backgroundColor = UIColor.blueColor()
+                contentView.backgroundColor = (blue)
             }
-//            if translation.x > 0{
-//                
-//            }
+            if translation.x > 0{
+                contentView.backgroundColor = (green)
+                
+            }
         
         
         }
