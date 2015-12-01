@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 var produceArray: [Produce]! //swap Apple with Produce
 
 class ViewController:
@@ -24,6 +25,7 @@ class ViewController:
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         
         tableView.backgroundColor = UIColor.whiteColor()
         
@@ -110,6 +112,10 @@ class ViewController:
         print("I picked some fruit")
         print(produce)
     }
+    
+    
+    
+
     
 }
 
