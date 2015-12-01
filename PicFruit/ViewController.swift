@@ -8,15 +8,17 @@
 
 import UIKit
 
+var produceArray: [Produce]! //swap Apple with Produce
+
 class ViewController:
     UIViewController,
     UITableViewDataSource,
-    UITableViewDelegate {
+    UITableViewDelegate, ProduceCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     
-    var produceArray: [Produce]! //swap Apple with Produce
+//    var produceArray: [Produce]! //swap Apple with Produce
    
 
     
@@ -64,20 +66,45 @@ class ViewController:
         let previewImage = produceArray[indexPath.row].previewImage
         cell.previewImageView.image = previewImage
 
-
+        cell.produce = produceArray[indexPath.row]
+        
+        
+        cell.delegate = self
         
         print(indexPath.row)
         
             return cell
     }
     
-
-
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        var pickViewController = segue.destinationViewController as PickViewController
-//      }
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        print("I'm scrolling")
+    }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("I selected a row")
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destinationViewController = segue.destinationViewController
+        
+        let produce = sender as! Produce
+        
+        if destinationViewController is PickViewController {
+            let pickViewController = destinationViewController as! PickViewController
+            
+            pickViewController.produce = produce
+        } else if destinationViewController is StoreViewController {
+            let storeViewController = destinationViewController as! StoreViewController
+            
+            storeViewController.produce = produce
+        }
+        
+      }
     
+    func pickedFruit(produce: Produce) {
+        print("I picked some fruit")
+        print(produce)
+    }
     
 }
 

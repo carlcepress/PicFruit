@@ -12,6 +12,7 @@ class PickViewController: UIViewController {
 
     @IBOutlet weak var pickView: UIImage!
     
+    var produce: Produce!
     
     override func viewDidLoad() {
         super.viewDidLoad()

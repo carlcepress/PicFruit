@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ProduceCellDelegate {
+    func pickedFruit(produce: Produce)
+}
+
 class ProduceCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,12 +21,14 @@ class ProduceCell: UITableViewCell {
     
    // @IBOutlet weak var frostedGlassView: UIVisualEffectView!
     
+    var delegate: ProduceCellDelegate!
     
     var viewController: ViewController!
+    
     var originalCenter = CGPoint()
     var deleteOnDragRelease = false
     
- 
+    var produce: Produce!
  
     
     override func awakeFromNib() {
@@ -56,26 +62,30 @@ class ProduceCell: UITableViewCell {
         
        
         if recognizer.state == .Began {
-            originalCenter = center
+            originalCenter = previewImageView.center
         }
   
         if recognizer.state == .Changed {
             let translation = recognizer.translationInView(self)
-            center = CGPointMake(originalCenter.x + translation.x, originalCenter.y)
+            previewImageView.center = CGPointMake(originalCenter.x + translation.x, originalCenter.y)
             
             print(translation.x)//,translation.y)
+            //print(produceArray[indexPath.row])
             
            if translation.x > 75{
-              viewController.performSegueWithIdentifier("pickSegue", sender: nil)
-                center = CGPointMake(originalCenter.x, originalCenter.y)
+                delegate.pickedFruit(produce)
+            
+              viewController.performSegueWithIdentifier("pickSegue", sender: produce)
+                previewImageView.center = CGPointMake(originalCenter.x, originalCenter.y)
+            
           }
            if translation.x < -75{
-                viewController.performSegueWithIdentifier("storeSegue", sender:self)
-                center = CGPointMake(originalCenter.x, originalCenter.y)
+                viewController.performSegueWithIdentifier("storeSegue", sender: produce)
+                previewImageView.center = CGPointMake(originalCenter.x, originalCenter.y)
           }
-//            if translation.x < 0{
-//                tableView.backgroundColor = UIColor.blueColor()
-//            }
+            if translation.x < 0{
+                contentView.backgroundColor = UIColor.blueColor()
+            }
 //            if translation.x > 0{
 //                
 //            }
@@ -85,10 +95,8 @@ class ProduceCell: UITableViewCell {
  
 // RETURN CELL TO CENTER
         if recognizer.state == .Ended {
-            let originalFrame = CGRect(x: 0, y: frame.origin.y,
-                width: bounds.size.width, height: bounds.size.height)
-            if !deleteOnDragRelease {
-                UIView.animateWithDuration(0.2, animations: {self.frame = originalFrame})
+                if !deleteOnDragRelease {
+                UIView.animateWithDuration(0.2, animations: {self.previewImageView.center = self.originalCenter})
             }
         }
     }

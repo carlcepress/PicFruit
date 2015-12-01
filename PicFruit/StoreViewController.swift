@@ -10,6 +10,8 @@ import UIKit
 
 class StoreViewController: UIViewController {
 
+    var produce: Produce!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
